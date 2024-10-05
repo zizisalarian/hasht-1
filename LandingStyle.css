@@ -39,6 +39,7 @@
 body {
     font-family: var(--main-font);
     background-color: var(--low-contrast);
+    overflow-x: hidden;
 }
 
 * {
@@ -117,7 +118,9 @@ p {
 header {
     background-color: var(--light);
 }
-
+.navbar-brand{
+    gap:14px;
+}
 .navbar-brand span {
     color: var(--dark);
     font-size: 16px;
@@ -146,7 +149,7 @@ header {
 
 
 
-@media (max-width: 576px) {
+@media (max-width: 992px) {
     .button-main {
         padding: 10px 24px 10px 20px;
         font-size: 14px;
@@ -171,8 +174,8 @@ header {
     }
 
     .nav-item a {
-        padding: 16px 24px !important;
-        border-top: 1px solid var(--gray-10);
+        padding: 6px 10px !important;
+     
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -185,6 +188,11 @@ header {
         font-weight: 500;
         line-height: 26px;
     }
+}
+@media (max-width: 576px) {
+    .nav-item a {
+        border-top: 1px solid var(--gray-10);
+        padding: 16px 24px !important;}
 }
 
 .main-view h6 {
@@ -798,12 +806,12 @@ line-height: 32px; /* 177.778% */
 }
 
 
-@media (max-width: 576px) {
+@media (max-width: 992px) {
     .container>section {
         padding: 0 24px;
     }
     .main-view {
-        padding-top: 15px
+        padding-top: 15px !important
     }
     .main-view h6 {
         color: var(--secondary);
@@ -862,7 +870,7 @@ line-height: 32px; /* 177.778% */
 
     .chart {
         width: 63px;
-        left: -44px;
+        left: -24px;
         top: 68px;
     }
 
@@ -919,6 +927,9 @@ line-height: 32px; /* 177.778% */
         /* 172.727% */
     }
 
+    .tests-items>div{
+        padding: 0
+    }
     .tests h2 {
         font-size: 22px;
         line-height: 38px;
@@ -1238,9 +1249,19 @@ footer .copyright {
     font-weight: 400;
     line-height: 28px;
 }
-
+@media only screen and (max-width: 1200px) {
+.button{
+    min-width: 100px;
+    padding: 8px 20px 8px 18px;
+    font-size: 12px;
+    line-height: 24px;
+}
+}
 
 @media only screen and (max-width: 576px) {
+
+}
+@media only screen and (max-width: 992px) {
     footer {
         padding: 24px;
     }

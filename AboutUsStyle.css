@@ -116,6 +116,9 @@ p {
 header{
     background-color: var(--light);
 }
+.navbar-brand{
+    gap:14px;
+}
 .navbar-brand span {
     color: var(--dark);
     font-size: 16px;
