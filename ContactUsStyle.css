@@ -39,12 +39,15 @@
 body {
     font-family: var(--main-font);
     background-color: var(--low-contrast);
+    overflow-x: hidden;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth !important;
+
 }
 
 a {
@@ -58,13 +61,16 @@ ul {
 p {
     margin-bottom: 0;
 }
-
+.next , .prev{
+    cursor: pointer;
+}
 .button {
     padding: 12px 36px 12px 28px;
     background-color: var(--light);
     border: 1px solid var(--gray-25);
     border-radius: 15px;
     width: fit-content;
+    min-width: 205px;
     color: var(--dark);
     font-size: 18px;
     font-weight: 500;
@@ -112,13 +118,21 @@ p {
     border: 1px solid var(--gray-25);
 }
 
+::-webkit-scrollbar {
+    display: none;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+}
 /* Header */
 header {
     background-color: var(--light);
 }
-.navbar-brand{
-    gap:14px;
+
+.navbar-brand {
+    gap: 14px;
 }
+
 .navbar-brand span {
     color: var(--dark);
     font-size: 16px;
@@ -147,7 +161,8 @@ header {
 
 
 
-@media (max-width: 576px) {
+
+@media (max-width: 992px) {
     .button-main {
         padding: 10px 24px 10px 20px;
         font-size: 14px;
@@ -159,22 +174,34 @@ header {
         top: 5px;
         left: 24px;
         position: absolute;
+        background-color: var(--light);
+        border: 1px solid var(--gray-25);
+        color: var(--dark);
+    }
+    header .button-main svg {
+        width: 22px;
+        height: 22px;
+    }
+    header .button-main svg path{
+        fill: var(--dark);
+    }
+    .navbar-toggler {
+        margin-left: 28px
     }
 
-    .navbar-toggler {
-        margin-left: 28px;
-        
-    }
-    .navbar-toggler:focus{
+    .navbar-toggler:focus {
         box-shadow: none;
+    }
+    .navbar-brand img{
+        width:27px
     }
     .navbar-nav {
         margin-right: 0;
     }
 
     .nav-item a {
-        padding: 16px 24px !important;
-        border-top: 1px solid var(--gray-10);
+        padding: 6px 10px !important;
+
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -189,8 +216,24 @@ header {
     }
 }
 
+@media (max-width: 576px) {
+    .nav-item a {
+        border-top: 1px solid var(--gray-10);
+        padding: 16px 24px !important;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .button {
+        min-width: 100px;
+        padding: 8px 20px 8px 18px;
+        font-size: 12px;
+        line-height: 24px;
+    }
+}
 main {
     margin-bottom: 103px;
+    margin-top: 84px;
 }
 
 main h1 {
@@ -291,7 +334,10 @@ input , select , textarea {
     background-color: transparent;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 992px) {
+    main{
+        margin-top: 32px
+    }
     main.container {
         padding: 24px;
         margin-bottom: 56px;
@@ -355,6 +401,10 @@ line-height: 28px; /* 175% */
 }
 
 /* Footer */
+
+
+
+/* Footer */
 footer {
     border-top: 2px solid var(--gray-10);
     background-color: var(--light);
@@ -376,6 +426,10 @@ footer div.copyright {
 
 }
 
+footer .top .right span{
+    display: inline-block;
+    min-width:200px
+}
 footer .top .right a .logo-container {
     width: 80px;
     height: 80px;
@@ -476,7 +530,10 @@ footer .copyright {
 }
 
 
-@media only screen and (max-width: 576px) {
+
+@media only screen and (max-width: 576px) {}
+
+@media only screen and (max-width: 992px) {
     footer {
         padding: 24px;
     }
@@ -552,7 +609,8 @@ footer .copyright {
         font-size: 14px;
         font-weight: 500;
         line-height: 26px;
-        margin-bottom: 16px
+        margin-bottom: 16px;
+        text-align: justify;
     }
 
     footer>.container>div.bottom a {
@@ -572,5 +630,25 @@ footer .copyright {
         line-height: 24px;
         margin-top: 4px;
 
-    }
+     }
+     .link-footer{
+        width: 50%;
+     }
+     .link-footer h5 , footer h5{
+        color: var(--dark);
+font-size: 16px;
+font-weight: 600;
+line-height: 28px; 
+     }
+     .link-footer ul li{
+        color: var(--gray);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 26px; /* 185.714% */
+        margin-bottom: 8px
+     }
 }
+
+
+
