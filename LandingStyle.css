@@ -925,7 +925,7 @@ header {
         text-align: center;
     }
 
-    .header-img img {
+    .header-img img.main-img-header {
         float: unset
     }
 
