@@ -1156,9 +1156,13 @@ header {
         height: 472px;
         padding: 20px
     }
-
-    .carees img {
+    .carees img{
+        bottom:-203px;
+        top: auto !important;
+    }
+    .carees img.main-carees-img {
         width: 231px;
+        height: auto;
         left: 50%;
         transform: translateX(-50%);
         bottom: -26px
