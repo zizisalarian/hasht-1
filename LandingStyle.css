@@ -511,6 +511,8 @@ header {
     font-size: 18px;
     font-weight: 600;
     line-height: 32px;
+    position: relative;
+    z-index: 9;
 }
 
 .tests-card-content>div {
