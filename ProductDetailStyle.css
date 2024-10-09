@@ -432,7 +432,8 @@ body>svg {
 }
 
 #ProductDetailTab li {
-    padding: 12px 28px
+    padding: 12px 28px;
+    min-width: fit-content;
 }
 
 #ProductDetailTab li a {
@@ -751,12 +752,77 @@ body>svg {
     line-height: 28px;
     /* 175% */
 }
+/* .price-card.mobile{
+    box-shadow: 0px 8px 44px 0px #272A3D1A;
+    position: absolute;
+    bottom: 0;
+    left: 0
 
+} */
+
+.mobile-price-card{
+    height: 78px;
+    box-shadow: 0px 8px 44px 0px #272A3D1A;
+    /* position: absolute;
+    bottom: 0;
+    left: 0 */
+}
+.mobile-price-card .price-card{
+    margin: 0
+}
+.mobile-price-card .price-card h6{
+    color: var(--gray);
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 200% */
+}
+
+.mobile-price-card .price-card .price-section p{
+    color: var(--dark);
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: 34px; /* 170% */
+}
+.mobile-price-card .price-card .discount-price{
+    color: var(--gray);
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 26px; /* 185.714% */
+}
+.mobile-price-card .price-card .discount-percent{
+    color: var(--destructive);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 28px; /* 175% */
+}
+.mobile-price-card .button-main{
+    color: var(--light);
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: 26px; /* 185.714% */
+padding: 10px 40px;
+width: fit-content !important;
+min-width: fit-content;
+}
+
+@media (max-width: 1200px) {
+    
+#ProductDetailTab li {
+    padding: 12px 28px;
+    min-width: fit-content;
+}
+
+}
 @media (max-width: 992px) {
     .container {
         padding: 0 24px;
     }
-
+    
     .main-view h6.label {
         margin-top: 32px;
         font-size: 12px;
@@ -791,7 +857,9 @@ body>svg {
         line-height: 28px;
 
     }
-
+    .product-tab{
+        margin-bottom: 24px;
+    }
     .product-price {
         padding: 12px 16px !important;
     }
@@ -1006,6 +1074,8 @@ footer .copyright {
 @media only screen and (max-width: 576px) {
     footer {
         padding: 24px;
+        position: relative;
+        z-index: 9;
     }
 
     footer>.container>div {
